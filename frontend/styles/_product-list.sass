@@ -1,0 +1,32 @@
+.product-list
+	@apply py-10 grid grid-cols-1 justify-items-center md:grid-cols-3 gap-4 md:gap-8
+
+.product-list__item
+	@apply col-span-1 hover:shadow-md rounded-md overflow-hidden
+	transition: all .2s
+
+	&-content
+		@apply p-4 md:p-8 flex justify-between font-medium
+
+
+.product
+	@apply pt-4 md:pt-10 md:grid grid-cols-10 overflow-hidden
+	padding-bottom: calc(2rem + env(safe-area-inset-bottom))
+
+	img
+		object-fit: cover
+		@apply mx-auto
+
+.product__title
+	@apply relative text-2xl mb-4 pl-4
+
+	&::before
+		content: "/"
+		@apply absolute left-0 text-blue-500
+		top: -2px
+
+.product__content
+	@apply pt-8 md:pt-40 md:pr-8 col-span-6 row-start-1
+
+.product__quantity
+	@apply flex items-center mb-4

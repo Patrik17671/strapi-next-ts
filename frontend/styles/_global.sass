@@ -1,0 +1,92 @@
+@font-face
+	font-family: 'Montserrat'
+	src: url('../assets/fonts/Montserrat-Regular.ttf')
+	font-weight: 400
+
+@font-face
+	font-family: 'Montserrat'
+	src: url('../assets/fonts/Montserrat-Medium.ttf')
+	font-weight: 500
+
+@font-face
+	font-family: 'Montserrat'
+	src: url('../assets/fonts/Montserrat-Bold.ttf')
+	font-weight: 600
+
+*
+	font-family: 'Montserrat', sans-serif
+	font-weight: 400
+	--swiper-navigation-size: 20px
+
+html
+	@apply bg-gray-200
+
+.container
+	max-width: 1440px
+	@apply mx-auto px-4 lg:px-8
+
+.overlay
+	@apply fixed opacity-50 inset-0
+	z-index: 5
+	background: rgba($black, .5)
+	width: 100vw
+	height: 100vh
+
+h3
+	@apply text-lg md:text-xl font-medium
+
+.btn
+	@apply py-2 px-6 uppercase text-blue-500 font-bold cursor-pointer
+	border: 2px solid $blue
+	transition: all .2s
+	font-size: 14px
+
+	&:hover
+		background: darken($gray1, 5%)
+		@apply shadow-md
+
+.swiper-button-next,
+.swiper-button-prev
+	height: var(--swiper-navigation-size)
+	@apply p-4
+
+	&::after
+		color: $black
+
+.lds-facebook
+	display: inline-block
+	position: relative
+	width: 80px
+	height: 80px
+
+	div
+		display: inline-block
+		position: absolute
+		left: 8px
+		width: 16px
+		background: $black
+		animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite
+
+		&:nth-child(1)
+			left: 8px
+			animation-delay: -0.24s
+
+		&:nth-child(2)
+			left: 32px
+			animation-delay: -0.12s
+
+		&:nth-child(3)
+			left: 56px
+			animation-delay: 0s
+
+@keyframes lds-facebook
+	0%
+		top: 8px
+		height: 64px
+
+	50%, 100%
+		top: 24px
+		height: 32px
+
+
+
